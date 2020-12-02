@@ -12,48 +12,31 @@ $reslt = mysqli_query($conn, $get_book);
 <div class="container pt-5">
     <input class='form-control' type="search" placeholder='Search Book...'>
 
-    <div class='text-right'>
-        <hr />
-        <a class='btn btn-sm btn-success' href="#"><i class='fa fa-plus'>Add New Book</i></a>
-        <hr />
-    </div>
+    
 
-<div>
-    <table class='table table-bordered table-striped mt-5'>
-        <thead>
-            <tr>
-                <th>Availabilty</th>
-                <th>Name</th>
-                <th>Author</th>
-                <th>Genre</th>
-                <th>Language</th>
-            </tr>
-        </thead>
-
-        <tbody>
+<div class="row">
+    
         <?php
-            while($row = mysqli_fetch_assoc($reslt)){
-
-           
+            while($row = mysqli_fetch_assoc($reslt)){         
         ?>
-            <tr>
-
-                <td></td>
-                <td><?=$row['name']?></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                <div class="col-sm-2 my-3">
+                <div class='card' style="min-height: 380px">
+                    <img class='card-img-top' style="max-height: 200px" src="https://cdn.cp.adobe.io/content/2/rendition/283104a5-039b-40e3-bdaa-f7b1d28d5cc8/artwork/edc5bfda-4444-4807-875d-b73825d353ff/version/0/format/jpg/dimension/width/size/300" alt="">
+                    <div class= 'card-body'>
+                        <h6 class='card-title'><?= $row['name']?></h6>
+                        <p class="text-small" style="font-size: 12px">By Rizan Mohomed</p>
+                        <p class="text-small" style="font-size: 11px">Sarasavi publisher</p>
+                    </div>
+                </div>
+                </div>
         <?php
          }
          ?>
-        </tbody>
-    </table>
+        
+</div>
 
 
-
-
-    <div class='ml-auto d-flex justify-content-end'>
+<div class='ml-auto d-flex justify-content-end'>
         <ul class='pagination'>
             <li class='page-item'>
                 <a class='page-link' href="#"><i class='fa fa-chevron-left'></i></a>
@@ -76,7 +59,6 @@ $reslt = mysqli_query($conn, $get_book);
             </li>
         </ul>
     </div>
-</div>
 
 
 </div>
