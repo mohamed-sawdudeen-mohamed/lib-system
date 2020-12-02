@@ -2,5 +2,5 @@
 
 
 require('./includes/heder.php');
-require(ROOT_PATH.'./includes/navbar.php');
+require('./includes/navbar.php');
 ?>
