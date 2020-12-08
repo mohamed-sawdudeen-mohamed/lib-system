@@ -1,6 +1,11 @@
 <?php
-require('./includes/constant.php');
+require('../includes/constants.php');
 require('../db/connect.php');
+
+if(!isset($_SESSION['user_id']) || $_SESSION['user_role']!=ROLE_BASE['student']) {
+    header('Location: '.BASE_URL.'/login.php');
+}
+
 ?>
 
 <!DOCTYPE html>

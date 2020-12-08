@@ -1,6 +1,7 @@
 <?php
 require('./includes/heder.php');
 require('./includes/navbar.php');
+
 ?>
 
 <div class="container pt-5">

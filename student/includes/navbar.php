@@ -17,7 +17,7 @@
     <li class='nav-item'>
     <a class='nav-link' href="./user.php">
     <i class='fa fa-user mr-1'></i>
-    User</a></li>
+    <?= $_SESSION['user_full_name'] ?></a></li>
 
     <li class='nav-item'>
     <a class='nav-link' href="../login.php">
